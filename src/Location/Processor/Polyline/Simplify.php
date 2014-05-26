@@ -155,6 +155,11 @@ class Simplify
 
         $length = sqrt($normalizedX * $normalizedX + $normalizedY * $normalizedY + $normalizedZ * $normalizedZ);
 
+		if($length == 0) {
+			$length = 1;
+			$normalizedX=1;
+		}
+
         $normalizedX /= $length;
         $normalizedY /= $length;
         $normalizedZ /= $length;
